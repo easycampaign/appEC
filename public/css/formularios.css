@@ -1,0 +1,173 @@
+body{
+	background-color: #fff;
+}.main{
+    background-image: url(../img/background.svg);
+    background-repeat: no-repeat;
+    background-position: -14px 0;
+    background-size: 107%;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+	box-sizing: border-box;
+}.container{
+	display: flex;
+    flex-direction: column;
+}.container_ativacao{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	max-width: 800px;
+	text-align: center;
+	margin-top: 80px;
+}.container_ativacao p{
+	margin: 16px 0 32px 0;
+}.container_ativacao footer{
+	width: 100%;
+	position: inherit;
+}
+
+.topbar_azul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}.topbar_azul:before{
+	content: '';
+	width: 100%;
+	height: 70px;
+	display: block;
+	position: absolute;
+	top: 0;
+	background: rgb(42,95,165);
+	background: -moz-linear-gradient(left, rgba(42,95,165,1) 0%, rgba(42,21,83,1) 100%);
+	background: -webkit-linear-gradient(left, rgba(42,95,165,1) 0%,rgba(42,21,83,1) 100%);
+	background: linear-gradient(to right, rgba(42,95,165,1) 0%,rgba(42,21,83,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a5fa5', endColorstr='#2a1553',GradientType=1 );
+}
+
+.svg_text{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: -10%;
+	top: 0;
+}.svg_text2 {
+    width: 68%;
+    height: auto;
+    position: absolute;
+    left: 2%;
+    top: -28px;
+}
+
+.welcome_msg{
+	text-align: left;
+	margin: 16px auto;
+}.welcome_msg p{
+	width: 100%;
+	margin-top: 16px;
+}
+
+form{
+	display: block;
+}form button{
+	margin: 16px auto;
+	display: block;
+}
+
+form.activation label{
+	display: flex;
+}form.activation label span{
+	width: 124px;
+	height: 65px;
+	background-color: #fff;
+	border: 2px solid #E6E6E6;
+	border-radius: 4px 0 0 4px;
+	font-family: 'Roboto-Regular';
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}form.activation label input{
+	border-radius: 0 30px 30px 0;
+}
+
+.logo{
+	width: 200px;
+}
+footer{
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}footer a{
+	text-decoration: underline;
+}
+@media only screen and (min-width: 412px){
+	.welcome_msg p{
+		width: 60%;
+		margin-top: 16px;
+	}.welcome_msg{
+		margin: 32px 16px;
+	}
+}@media only screen and (min-width: 768px){
+	.main{
+		padding: 150px 16px 0;
+	}.container_ativacao footer{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.main{
+		background-image: url(../img/background_intro.svg);
+		background-repeat: no-repeat;
+		background-position: -224px 0;
+		background-size: auto;
+		display: flex;
+		justify-content: flex-end;
+		padding: 0;
+		width: 100vw;
+		height: auto;
+	}
+	.container{
+		width: 55%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0;
+		float: right;
+		padding: 60px 60px 60px 0;
+		box-sizing: content-box;
+	}.svg_text{
+		width: 50%;
+		top: inherit;
+		left: -3%;
+	}.svg_text2 {
+		width: 33%;
+		top: inherit;
+		left: 0;
+	}.welcome_msg{
+		text-align: center;
+		margin: 0 auto 30px;
+	}.welcome_msg p {
+		width: 100%;
+	}.logo{
+		width: 300px;
+	}footer{
+		bottom: auto;
+		width: 100%;
+		position: relative;
+		margin: 15px 0;
+	}
+}
+@media only screen and (min-width: 1300px){
+	.main{
+		background-position: -126px 0;
+	}.svg_text{
+		width: 55%;
+		left: -6%;
+	}.svg_text2 {
+		width: 34%;
+		left: 7%;
+	}
+}

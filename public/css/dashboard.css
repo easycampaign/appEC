@@ -1,0 +1,273 @@
+/*HEADER*/
+header{
+	padding-bottom: 24px;
+}
+.card_list{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+.card{
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 3px 60px rgba(29, 29, 90, 0.25);
+	display: block;
+	min-width: 290px;
+	width: 100%;
+	height: auto;
+	padding: 24px;
+	flex-grow: 1;
+	position: relative;
+	margin-bottom: 32px;
+}.card .card--title{
+	margin-bottom: 24px;
+}.card svg{
+	display: block;
+	margin: 0 auto;
+}
+
+/*CARD TODAS COMPANHAS*/
+.card_all_campaigns--row{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0px auto;
+}.card_all_campaigns--row:last-of-type{
+	width: 75%;
+}.card_all_campaigns--item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}.card_all_campaigns--item div{
+	width: 72px;
+	height: 72px;
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 8px;
+}
+.card_all_campaigns--item div.active{
+	background-position: -2px -2px;
+}.card_all_campaigns--item div.scheduled{
+	background-position: -78px -2px;
+}.card_all_campaigns--item div.paused{
+	background-position: -154px -2px;
+}.card_all_campaigns--item div.finished{
+	background-position: -230px -2px;
+}.card_all_campaigns--item div.stopped{
+	background-position: -305px -2px;
+}
+
+/*CARD CAMAPANHAS ATIVAS*/
+.card_active_campaign--slider>.proximo{
+	display: none;
+}.card_active_campaign--slider>.dots{
+	position: absolute;
+	left: 50%;
+	bottom: 24px;
+	width: 29px;
+	height: 12px;
+}
+.card_active_campaign--content{
+	width: 242px;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	transition: all ease .8s;
+	margin: 0 auto 24px;
+	box-sizing: border-box;
+}.card_active_campaign--content:hover{
+	border: 1px solid #0800FF;
+	box-shadow: 0 3px 30px rgba(29, 29, 90, 0.25);
+}.card_active_campaign--content>.title{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 16px;
+}.card_active_campaign--content>.title>.data{
+	opacity: .7;
+	display: flex;
+	align-items: center;
+}.card_active_campaign--content>.title>.data:before{
+	content: '';
+	display: block;
+	width: 12px;
+	height: 13px;
+	background-image: url(../img/calendar.svg);
+	background-repeat: no-repeat;
+	margin-right: 8px;
+}
+.card_active_campaign--content>.channels{
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}.card_active_campaign--content>.channels>img{
+	height: 18px;
+	margin: 8px;
+}
+.card_active_campaign--content>.budget{
+	display: flex;
+	flex-direction: column;
+}.card_active_campaign--content>.budget>.value{
+	opacity: .5;
+}
+.card_active_campaign--content>.progress_bar{
+	width: 100%;
+}
+.card_active_campaign--content>.controls{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 24px 0 0;
+}.card_active_campaign--content>.controls>a:hover{
+	text-decoration: underline;
+}.card_active_campaign--content>.controls>.pausar, .card_active_campaign--content>.controls>.ajustar{
+	display: flex;
+	align-items: center;
+}.card_active_campaign--content>.controls>.pausar:before, .card_active_campaign--content>.controls>.ajustar:before{
+	content: '';
+	display: block;
+	background-repeat: no-repeat;
+	margin-right: 8px;
+}.card_active_campaign--content>.controls>.pausar:before{
+	width: 23px;
+	height: 23px;
+	background-image: url(../img/pause-circle.svg);
+}.card_active_campaign--content>.controls>.ajustar:before{
+	width: 18px;
+	height: 15px;
+	background-image: url(../img/sliders.svg);
+}
+
+/*CARD ORCAMENTO*/
+.card_budget{
+	background-image: url(../img/budget_bg.svg);
+	background-repeat: no-repeat;
+	background-position: 20% 10%;
+}.card_budget--values{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin: 32px 0 40px;
+}.card_budget--values>p{
+	margin-right: 8px;
+}.card_budget--values-value{
+	display: flex;
+}.card_budget--values-value span{
+	display: flex;
+	margin-left: 8px;
+	align-items: flex-end;
+	margin-top: -6px;
+}.card_budget--values-value span h3{
+	margin-bottom: 6px;
+}.card_budget .card_go_link:after{
+	background-image: url(../img/chevron-right-white.svg);
+}
+
+/*CARD ESTOQUE*/
+.card_estoque--filter{
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+	margin-top: -16px;
+}.card_estoque>p{
+	display: none;
+}.card_estoque--filter p{
+	margin-right: 16px;
+}
+
+/*CARD DESEMPENHO*/
+.card_desempenho--filter{
+	display: flex;
+	flex-direction: column;
+	margin: -16px 0 8px 0;
+}.card_desempenho--filter select{
+	margin-right: 24px;
+}
+
+
+@media only screen and (min-width: 412px){
+/*	CARD CAMAPANHAS ATIVAS*/
+	.card_active_campaign--content{
+		width: 300px;
+	}
+}
+@media only screen and (min-width: 768px){
+	#desempenho_svg{
+		width: 75%;
+	}#calendar_svg{
+		width: 70%;
+	}#estoque_svg{
+		width: 75%;
+	}
+	.card{
+		min-width: 370px;
+		width: 350px;
+		min-height: 320px;
+		height: 360px;
+		margin: 0 16px 16px 0;
+	}
+	
+	/*CARD CAMAPANHAS ATIVAS*/
+	.card_active_campaign--content{
+		width: 380px;
+	}.card_active_campaign--content>.title{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+	}.card_active_campaign--content>.budget{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}.card_active_campaign--content>.controls{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 24px 0 16px;
+	}.card_active_campaign--content>.budget {
+    	flex-direction: row;
+	}.card_active_campaign--slider>.proximo{
+		position: absolute;
+		top: 50%;
+		right: 35px;
+		width: 29px;
+		height: 12px;
+		display: block;
+	}.card_budget--values{
+		flex-direction: row;
+		align-items: center;
+	}.card_estoque>p{
+		position: absolute;
+		right: 24px;
+		top: 34px;
+	}.card_all_campaigns--row{
+		width: 80%;
+		margin: 24px auto;
+	}.card_all_campaigns--row:last-of-type{
+		width: 55%;
+	}.card_desempenho--filter{
+		flex-direction: row;
+		align-items: center;
+	}
+
+}
+
+@media only screen and (min-width: 1068px){
+	.card_active_campaign--content{
+		width: 300px;
+	}
+}@media only screen and (min-width: 1200px){
+	.card_active_campaign--content{
+		width: 380px;
+	}
+}
