@@ -64,9 +64,19 @@
 						<div class="header-content">
 							<h1 class="mb-5">Gerenciamento inteligente e mais assertivo de campanhas de marketing </h1>
 							<div>
-								<form class="first-cta">
+								<% if(validacao) { %>
+									<div class="alert alert-danger" role="alert">
+										<ul>
+											<% for(var i = 0; i < validacao.length; i++) { %>
+												<li><%= validacao[i].msg %></li>
+											<% } %>    
+										</ul>    
+									</div>
+								<% } %>  
+								
+								<form class="first-cta" action="/clientes/salvar" method="post">
 									<div class="form-group">
-										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+										<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
 										<input type="submit" value="QUERO TESTAR" class="btn btn-primary">
 									</div>
 									<small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
