@@ -34,7 +34,7 @@ module.exports.add_cliente = function(app, req, res) {
         var clienteModel = new app.app.models.ClienteDAO(connection);
         
         clienteModel.salvarCliente(req.body, function(error, result) {
-            console.log(result);
+           // console.log(result);
         });
         
         res.render('home/home', {validacao: erros, cliente: {}, sucesso: false, sucessoCliente: true });

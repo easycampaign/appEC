@@ -19,6 +19,21 @@ ClienteDAO.prototype.salvarCliente = function(cliente, callback) {
     });
 }
 
+ClienteDAO.prototype.salvarCadastro = function(cliente, callback) {
+    console.log(cliente);
+    
+    var query  = "INSERT INTO usuario (login, senha, nome) VALUES (?, ?, ?)";
+    var values = [cliente.email, cliente.senha, cliente.nome];
+     console.log(query);
+     console.log(values);
+    
+    this._connection.query(query, values, function(error) {
+        if (error) return console.log(error);
+        console.log('Adicionou o registro');
+        this._connection.end();
+    });
+}
+
 module.exports = function() {
     return ClienteDAO;
 }
