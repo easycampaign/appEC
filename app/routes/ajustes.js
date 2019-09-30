@@ -1,5 +1,7 @@
 module.exports = function (app) {
-    app.get('/ajustes', function(req, res){
+    app.post('/ajustes', function(req, res){
+        console.log("na na rota");
         res.render('paginas/ajustes');
     });
 }
+

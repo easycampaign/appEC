@@ -3,6 +3,10 @@
 	<head>
 		<title>Login - Easy Campaign</title>
 		<meta charset="utf-8">
+
+		<!-- Bootstrap core CSS -->
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 		<link rel="stylesheet" href="/css/reset.css">
 		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/formularios.css">
@@ -18,23 +22,38 @@
 					<p class="p16 black_clear_text">Um prazer vê-lo aqui hoje.</p>
 					<br>
 				</div>
-				<form action="/ajustes">
+
+				<% if(validacao) { %>
+					<div class="alert alert-danger" role="alert">
+						<ul>
+							<% if(errado) { %>
+								<b>Usuario e senha invalidos</b>
+							<% } %>
+							<% for(var i = 0; i < validacao.length; i++) { %>
+								<li><%= validacao[i].msg %></li>
+							<% } %>  
+						</ul>    
+					</div>
+				<% } %>
+
+				<form action="/login/logar" method="POST">
 					<div class="row">
 						<label for="email">
 							<p class="p16 black_clear_text">E-mail</p>
-							<input type="text" name="email" id="email" placeholder="email@empresatal.com.br"/>
+							<input type="text" name="email" id="email" name="email" placeholder="email@empresatal.com.br"/>
 						</label>
 					</div>
 					<br>
 					<div class="row">
 						<label for="senha">
 							<p class="p16 black_clear_text">Senha</p>
-							<input type="text" name="senha" id="senha"/>
+							<input type="password" name="senha" id="senha"/>
 						</label>
 					</div>
 					<br>
 					<button type="submit" class="blue_bg white_text p18">Entrar</button>
 				</form>
+
 				<br>
 				<a href="/cadastrar" class="p14 black_clear_text text_center">Ainda não é cadastrado?</a>
 				<footer>

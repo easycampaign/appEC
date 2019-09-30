@@ -1,15 +1,15 @@
 var mysql = require('mysql');
 
 var conecMySQL = function() {
-  console.log('Conexao foi estabelecida');
   return mysql.createConnection(
-  {
-    host : 'localhost',
-    user : 'root',
-    password : 'labfiap#2019$',
-    database : 'sistema_produtos'
-  }
-);
+    {
+      host : '162.241.2.244',
+      port: '3306',
+      user : 'potetb96_easy',
+      password : 'potet_easy',
+      database : 'potetb96_dbaplicacao'
+    }
+  );
 }
 
 module.exports = function(){
