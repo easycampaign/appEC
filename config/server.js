@@ -2,6 +2,9 @@ var express = require('express'),
     consign = require('consign'),
     path = require('path');
 
+var appInsights = require('applicationinsights')
+appInsights.setup("7cdaa886-cb95-4f85-90a9-1cd9a7a8d215").start()
+
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 

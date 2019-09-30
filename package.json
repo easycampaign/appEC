@@ -9,6 +9,7 @@
   "author": "Nayara Felix",
   "license": "ISC",
   "dependencies": {
+    "applicationinsights": "^1.4.2",
     "body-parser": "^1.17.2",
     "consign": "^0.1.6",
     "ejs": "^2.6.2",
