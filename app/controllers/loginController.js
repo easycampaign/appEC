@@ -21,7 +21,7 @@ module.exports.logar = function (app, req, res) {
             console.log(cliente);
             
             if (cliente[0]) {
-                res.render('paginas/dashboard');
+                res.render('paginas/dashboard', { cliente: cliente });
             } else {
                 res.render('paginas/login', { validacao: {}, errado: true } );
             }
