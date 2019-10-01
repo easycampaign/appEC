@@ -3,6 +3,20 @@
 	<head>
 		<title>Nova Campanha - Easy Campaign</title>
 		<meta charset="utf-8">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<!-- Owl Carousel -->
+		<link rel="stylesheet" href="/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="/css/owl.theme.default.min.css">
+		<script src="/js/owl.carousel.min.js"></script>
+
+		<!-- Nativos -->
 		<link rel="stylesheet" href="/css/reset.css">
 		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/nova-campanha.css">
@@ -83,13 +97,13 @@
 			<div class="main">
 				<div class="container">
 					<div class="user_infos">
-						<img src="/img/notifications.svg" alt="Notificações" class="icon_notifications">
+						<a href="#" data-toggle="popover" title="Central de Notificações" data-placement="bottom" data-content="Você não possui notificações no momento.">
+							<img src="/img/notifications.svg" alt="Notificações" class="icon_notifications">
+						</a>
 						<div class="user_infos--profile_picture"></div>
 						<div class="user_infos--name">
 							<h4 class="black_clear_text">Neil Patel</h4>
-							<p class="black_clear_text p12">GERENTE DE MARKETING</p>
 						</div>
-						<div class="triangle_down"></div>
 					</div>
 					<header>
 						<h2 class="page_title white_text">Nova campanha</h2>
@@ -118,30 +132,55 @@
 								<div class="suggestions-filters">
 									<select name="tag">
 										<option value="1">Por TAG</option>
+										<option value="2">Dia das Mães</option>
+										<option value="3">Copa do Mundo</option>
 									</select>
 									<select name="date">
 										<option value="1">Por data</option>
+										<option value="2">14 de junho de 2018</option>
+										<option value="3">12 de Maio de 2019</option>
 									</select>
 								</div>
-								<div class="card_active_suggestions--slider">
+								<div class="card_active_suggestions--slider owl-carousel owl-theme">
 									<div href="#" class="card_active_suggestions--content">
-										<div class="suggestions-photo"></div>
+										<div class="suggestions-photo mae"></div>
 										<h4>Dia das mães</h4>
-										<p class="gray_dark_text roboto_italic p16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<p class="gray_dark_text roboto_italic p16">Campanha direcionada para a comemoração do dia das mães.</p>
 									</div>
 									<div href="#" class="card_active_suggestions--content">
-										<div class="suggestions-photo"></div>
+										<div class="suggestions-photo copa"></div>
 										<h4>Copa do mundo</h4>
-										<p class="gray_dark_text roboto_italic p16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										<p class="gray_dark_text roboto_italic p16">Campanha direcionada para o período da copa do mundo.</p>
 									</div>
-									<img src="/img/chevron-right-gray.svg" class="proximo">
+									<div href="#" class="card_active_suggestions--content">
+										<div class="suggestions-photo mae"></div>
+										<h4>Dia das mães</h4>
+										<p class="gray_dark_text roboto_italic p16">Campanha direcionada para a comemoração do dia das mães.</p>
+									</div>
+									<div href="#" class="card_active_suggestions--content">
+										<div class="suggestions-photo copa"></div>
+										<h4>Copa do mundo</h4>
+										<p class="gray_dark_text roboto_italic p16">Campanha direcionada para o período da copa do mundo.</p>
+									</div>
 								</div>
-								<img src="/img/two_dots_slider.svg" class="dots">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			$(function () {
+					$('[data-toggle="popover"]').popover()
+			})
+		</script>
+		<script>
+			$('.owl-carousel').owlCarousel({
+				loop:false,
+				margin:10,
+				nav:false,
+				items:2
+			})
+		</script>
 	</body>
 </html>

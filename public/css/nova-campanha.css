@@ -149,9 +149,9 @@
 	display: block;
 	background-image: url(../img/sprite.png);
 	margin-bottom: 8px;
-}.card_active_suggestions--content:first-of-type .suggestions-photo{
+}.card_active_suggestions--content .suggestions-photo.mae {
 	background-position: -2px -100px;
-}.card_active_suggestions--content:last-of-type .suggestions-photo{
+}.card_active_suggestions--content .suggestions-photo.copa {
 	background-position: -192px -100px;
 }
 
