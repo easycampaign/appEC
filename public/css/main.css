@@ -388,10 +388,12 @@ body{
 	}.triangle_down{
 		margin-left: 24px;
     }.label50{
-		width: calc(50% - 16px);
+		width: calc(47% - 16px);
 		padding: 0 8px;
 	}label{
 		margin-bottom: inherit;
+	}label input, label textarea{
+		width: 90%
 	}.row{
 		margin-bottom: 8px;
 	}

@@ -83,7 +83,7 @@ header{
 	flex-direction: column;
 	cursor: pointer;
 	transition: all ease .8s;
-	margin: 0 auto 24px;
+	margin: 0 auto 5px;
 	box-sizing: border-box;
 }.card_active_campaign--content:hover{
 	border: 1px solid #0800FF;

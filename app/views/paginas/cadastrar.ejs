@@ -20,7 +20,7 @@
 			<div class="container cadastrar">
 				<div class="welcome_msg">
 					<img class="logo" src="/img/easycampaign.svg" alt="EasyCampaign">
-					<p class="p16 black_clear_text">Que bom que chegou até aqui, isso significa que já conversamos! Vamos continuar?</p>
+					<p class="p16 black_clear_text">Que bom que chegou até aqui, isso significa que já conversamos! <br> Vamos continuar?</p>
 				</div>
 				
 				<% if(validacao) { %>
@@ -43,27 +43,27 @@
 
 				<form action="/cadastrar/cadastrar" method="POST">
 					<div class="row">
-						<label for="nome" class="label50">
+						<label for="nome">
 							<p class="p16 black_clear_text">Nome</p>
-							<input type="text" name="nome" id="nome" placeholder="Nome" value="<%= cliente.nome %>" required/>
+							<input type="text" name="nome" id="nome" placeholder="Ex: Fulano de Tal" value="<%= cliente.nome %>" required/>
 						</label>
 					</div>
 
 					<div class="row">
-						<label for="email" class="label50">
+						<label for="email">
 							<p class="p16 black_clear_text">E-mail</p>
-							<input type="text" name="email" id="email" placeholder="email@empresatal.com.br" value="<%= cliente.email %>" required/>
+							<input type="text" name="email" id="email" placeholder="Ex: email@empresatal.com.br" value="<%= cliente.email %>" required/>
 						</label>
 					</div>
 					<div class="row">
-						<label for="senha" class="label50">
+						<label for="senha">
 							<p class="p16 black_clear_text">Senha</p>
-							<input type="password" name="senha" id="senha" required/>
+							<input type="password" name="senha" id="senha" placeholder="Digite a sua senha" required/>
 						</label>
 						
-						<label for="repeat_senha" class="label50">
+						<label for="repeat_senha">
 							<p class="p16 black_clear_text">Repita a senha</p>
-							<input type="password" name="repeat_senha" id="repeat_senha" required/>
+							<input type="password" name="repeat_senha" id="repeat_senha" placeholder="Repita a sua senha digitada acima" required/>
 						</label>
 					</div>
 					<button type="submit" class="blue_bg white_text p18">Cadastrar</button>
