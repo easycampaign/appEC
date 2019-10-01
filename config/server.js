@@ -3,7 +3,7 @@ var express = require('express'),
     path = require('path');
 
 var appInsights = require('applicationinsights')
-appInsights.setup("7cdaa886-cb95-4f85-90a9-1cd9a7a8d215").start()
+appInsights.setup("7cdaa886-cb95-4f85-90a9-1cd9a7a8d215").start().setSendLiveMetrics(true)
 
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
