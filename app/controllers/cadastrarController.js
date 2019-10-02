@@ -20,8 +20,7 @@ module.exports.cadastrar = function (app, req, res) {
             var connection = app.config.dbConnection();
             var clienteDAO = new app.app.models.ClienteDAO(connection);
             
-            clienteDAO.salvarCadastro(req.body, function(error, result) {
-            });
+            clienteDAO.salvarCadastro(req.body, function(error, result) { });
             res.render('paginas/ajustes', { cliente: cliente });
         }
     }

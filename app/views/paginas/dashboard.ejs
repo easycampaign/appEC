@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="/css/dashboard.css">
 	</head>
 	<body>
+		<% console.log(cliente) %>
 		<div class="wrapper">
 			<div class="topbar">
 				<a href="#" title="menu" alt="menu"><img class="icon_menu" src="/img/menu.svg"/></a>
@@ -21,12 +22,12 @@
 						</a>
 						<div class="user_infos--profile_picture"></div>
 						<div class="user_infos--name">
-							<h4 class="black_clear_text">Neil Patel</h4>
+							<h4 class="black_clear_text"><%= cliente[0].nome %></h4>
 						</div>
 					</div>
 					<header>
 						<h2 class="page_title white_text">Visão Geral</h2>
-						<h1 class="welcome_txt white_text">Bem vindo, <b>Neil</b>.</h1>
+						<h1 class="welcome_txt white_text">Bem vindo, <b><%= cliente[0].nome %></b>.</h1>
 					</header>
 					<div class="card_list card_all_campaigns">
 						<div class="card">
