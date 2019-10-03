@@ -22,12 +22,17 @@
 						</a>
 						<div class="user_infos--profile_picture"></div>
 						<div class="user_infos--name">
-							<h4 class="black_clear_text"><%= cliente[0].nome %></h4>
+							<h4 class="black_clear_text text-center"><%= cliente[0].nome %></h4>
 						</div>
 					</div>
 					<header>
 						<h2 class="page_title white_text">Visão Geral</h2>
-						<h1 class="welcome_txt white_text">Bem vindo, <b><%= cliente[0].nome %></b>.</h1>
+						<h1 class="welcome_txt white_text">
+							Bem vindo, 
+							<b>
+								<%= cliente[0].nome.substring(0, cliente[0].nome.indexOf(" ") != -1 ? cliente[0].nome.indexOf(" ") : cliente[0].nome.length) %>
+							</b>.
+						</h1>
 					</header>
 					<div class="card_list card_all_campaigns">
 						<div class="card">
