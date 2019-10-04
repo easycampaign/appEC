@@ -20,7 +20,7 @@ steps:
     npm run build
   displayName: 'npm install'
 - task: ArchiveFiles@2
-  displayname: 'Archive Files'
+  displayName: 'Archive Files'
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
